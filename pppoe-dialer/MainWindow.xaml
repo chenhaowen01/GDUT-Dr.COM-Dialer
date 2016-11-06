@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:pppoe_dialer"
         mc:Ignorable="d"
-        Title="PPPoE Dialer" Height="235" Width="290" ResizeMode="NoResize" GlowBrush="LightBlue"
+        Title="GDUT Dr.COM Dialer" Height="260" Width="290" ResizeMode="NoResize" GlowBrush="LightBlue"
         SaveWindowPosition="True" ShowIconOnTitleBar="True"
         xmlns:wpf="clr-namespace:MaterialDesignThemes.Wpf;assembly=MaterialDesignThemes.Wpf"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
@@ -14,7 +14,7 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro">
     <Controls:MetroWindow.RightWindowCommands>
         <Controls:WindowCommands>
-            <TextBlock><Hyperlink NavigateUri="https://github.com/mchome" RequestNavigate="FollowMe" Foreground="White">Follow Me</Hyperlink></TextBlock>
+            <TextBlock><Hyperlink NavigateUri="https://github.com/chenhaowen01" RequestNavigate="FollowMe" Foreground="White">Follow Me</Hyperlink></TextBlock>
         </Controls:WindowCommands>
     </Controls:MetroWindow.RightWindowCommands>
     <Grid>
@@ -27,9 +27,13 @@
                 <Label x:Name="lb2" Content="密码: " Margin="10, 0, 0, 0" />
                 <PasswordBox x:Name="pb_password" Width="160" Margin="10, 0, 0, 0" />
             </StackPanel>
+            <StackPanel Orientation="Horizontal" Margin="0, 0, 0, 10">
+                <CheckBox x:Name="remember_checkbox" Width="80" Margin="30 , 0, 0, 0" Content="记住密码" HorizontalContentAlignment="Center"/>
+                <CheckBox x:Name="autolog_checkbox" Width="80" Margin="30, 0, 0, 0" Content="自动登录" HorizontalContentAlignment="Center"/>
+            </StackPanel>
             <Label x:Name="lb_message" Height="30" Content="请输入账号和密码." HorizontalContentAlignment="Center" HorizontalAlignment="Center" />
             <StackPanel Orientation="Horizontal" Margin="15">
-                <Button x:Name="dial" Width="80" Margin="15, 0, 30, 0" Content="拨号" HorizontalContentAlignment="Center" Click="dial_Click" />
+                <Button x:Name="dial" Width="80" Margin="15, 0, 30, 0" Content="登录" HorizontalContentAlignment="Center" Click="dial_Click" />
                 <Button x:Name="hangup" Width="80" Margin="15, 0, 30, 0" Content="注销" HorizontalContentAlignment="Center" Click="hangup_Click" />
             </StackPanel>
         </StackPanel>
